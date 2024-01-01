@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "net.tntchina.mixin.mixins",
+  "refmap": "mixins.tntchina.refmap.json",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "MixinGuiScreen",
+    "MixinMinecraft",
+    "MixinRender",
+    "MixinRendererLivingEntity"
+  ]
+}

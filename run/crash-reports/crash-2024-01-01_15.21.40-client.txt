@@ -1,0 +1,102 @@
+---- Minecraft Crash Report ----
+// You should try our sister game, Minceraft!
+
+Time: 01/01/24 15:21
+Description: Updating screen events
+
+java.lang.RuntimeException: java.lang.ClassCastException: net.minecraft.client.gui.GuiMainMenu cannot be cast to net.tntchina.inputFix.interfaces.IGuiScreen
+	at net.tntchina.inputFix.GuiScreenFix$Proxy.keyTyped(GuiScreenFix.java:46)
+	at net.tntchina.inputFix.impl.GuiScreenFixWindows.handleKeyboardInput(GuiScreenFixWindows.java:14)
+	at net.tntchina.inputFix.GuiScreenFix.handleKeyboardInput(GuiScreenFix.java:24)
+	at net.minecraft.client.gui.GuiScreen.handler$handleKeyboardInput$zza000(GuiScreen.java:890)
+	at net.minecraft.client.gui.GuiScreen.handleKeyboardInput(GuiScreen.java)
+	at net.minecraft.client.gui.GuiScreen.handleInput(GuiScreen.java:609)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1784)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1100)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:384)
+	at net.minecraft.client.main.Main.main(Main.java:116)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:95)
+	at GradleStart.main(GradleStart.java:24)
+Caused by: java.lang.ClassCastException: net.minecraft.client.gui.GuiMainMenu cannot be cast to net.tntchina.inputFix.interfaces.IGuiScreen
+	at net.tntchina.inputFix.GuiScreenFix$Proxy.keyTyped(GuiScreenFix.java:41)
+	... 21 more
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at net.tntchina.inputFix.GuiScreenFix$Proxy.keyTyped(GuiScreenFix.java:46)
+	at net.tntchina.inputFix.impl.GuiScreenFixWindows.handleKeyboardInput(GuiScreenFixWindows.java:14)
+	at net.tntchina.inputFix.GuiScreenFix.handleKeyboardInput(GuiScreenFix.java:24)
+	at net.minecraft.client.gui.GuiScreen.handler$handleKeyboardInput$zza000(GuiScreen.java:890)
+	at net.minecraft.client.gui.GuiScreen.handleKeyboardInput(GuiScreen.java)
+	at net.minecraft.client.gui.GuiScreen.handleInput(GuiScreen.java:609)
+
+-- Affected screen --
+Details:
+	Screen name: net.minecraft.client.gui.GuiMainMenu
+Stacktrace:
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1784)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1100)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:384)
+	at net.minecraft.client.main.Main.main(Main.java:116)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:95)
+	at GradleStart.main(GradleStart.java:24)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8.9
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_181, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 1166640736 bytes (1112 MB) / 2042101760 bytes (1947 MB) up to 3817865216 bytes (3641 MB)
+	JVM Flags: 2 total; -Xmx4096m -Xms1024m
+	IntCache: cache: 0, tcache: 0, allocated: 12, tallocated: 94
+	FML: MCP 9.19 Powered by Forge 11.15.1.2318 4 mods loaded, 4 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAA	mcp{9.19} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAA	FML{8.0.99.99} [Forge Mod Loader] (forgeSrc-1.8.9-11.15.1.2318-1.8.9-PROJECT(TrueSight).jar) 
+	UCHIJAAAA	Forge{11.15.1.2318} [Minecraft Forge] (forgeSrc-1.8.9-11.15.1.2318-1.8.9-PROJECT(TrueSight).jar) 
+	UCHIJAAAA	true-sight{1.0.0} [TrueSight] (minecraft.jar) 
+	Loaded coremods (and transformers): 
+TrueSight (unknown)
+  
+	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.6.0 NVIDIA 536.67' Renderer: 'NVIDIA GeForce GTX 1050 Ti/PCIe/SSE2'
+	Launched Version: 1.8.9
+	LWJGL: 2.9.4
+	OpenGL: NVIDIA GeForce GTX 1050 Ti/PCIe/SSE2 GL version 4.6.0 NVIDIA 536.67, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: No
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: 
+	Current Language: 简体中文 (中国)
+	Profiler Position: N/A (disabled)
+	CPU: 8x 12th Gen Intel(R) Core(TM) i3-12100
